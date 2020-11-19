@@ -17,8 +17,11 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-    @cocktail.save
-    redirect_to cocktail_path(@cocktail)
+    if @cocktail.save
+      redirect_to cocktail_path(@cocktail)
+    else
+      render 'new'
+    end
   end
 
   def update
@@ -29,8 +32,9 @@ class CocktailsController < ApplicationController
     redirect_to cocktail_path(@cocktail)
   end
 
-  def patch
-
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
   end
 
   private

@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 body {
-  background-color: rgb(255, 179, 179);
+  background-color: rgb(247, 194, 119);
 }
+// rgb(255, 179, 179)
 .banner {
   background-size: cover;
   background-position: center;
@@ -29,6 +30,10 @@ body {
 
 .container {
   text-align: center;
+
+  h1 {
+    margin-bottom:1rem;
+  }
 }
 
 .card-product {
@@ -67,15 +72,17 @@ body {
 }
 
 .cocktail {
-  height: 600px;
-  width: 600px;
+  height: auto;
+  width: 400px;
   margin: 0 auto;
   background-color: whitesmoke;
   border-radius: 5px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   h2 {
+    margin-top: 1rem;
     color: black;
     text-align: center;
+    text-transform: uppercase;
   }
   &-img {
     width: 100%;
@@ -85,5 +92,18 @@ body {
 
   ul {
     list-style: none;
+    text-align:center;
+    margin: 0;
+    padding: 0;
   }
+
+  p {
+    text-align:center;
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

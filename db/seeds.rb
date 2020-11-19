@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Cocktail.destroy_all
+Ingredient.destroy_all
+Dose.destroy_all
+
 20.times do 
   Ingredient.create(name: Faker::Beer.brand)
 end

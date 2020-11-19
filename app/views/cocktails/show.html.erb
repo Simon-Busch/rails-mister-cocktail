@@ -5,16 +5,17 @@
   </div>
 </div>
 
+<%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger rounded-lg" %>
 <div class="cocktail">
   <img src='https://www.destinationcocktails.fr/wp-content/uploads/2019/11/cocktails_fumants-e1541424344388.jpg' class="cocktail-img">
   <h2><%= @cocktail.name %></h2>
   <p>Composition</p>
   <ul>
     <% @cocktail.doses.each do |dose|%>
-      <li><%="#{dose.description} #{dose.ingredient.name}"%>
-        <i class="fas fa-ban"></i>
-        <%= "delete me", cocktail_dose_path %>
-      </li>
+      <li><%="#{dose.description} || #{dose.ingredient.name}"%>
+        <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash"></i>
+      <% end %>
     <%end%>
   </ul>
 </div>
@@ -23,9 +24,6 @@
   <%= simple_form_for [@cocktail, @dose] do |f|%>
     <%=f.association :ingredient %>
     <%=f.input :description%>
-    <%=f.submit class:"btn btn-primary"%>
+    <%=f.submit  "Add an ingredient", class:"btn btn-primary rounded-lg"%>
   <% end %>
-  <%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
 </div>  
-
-<%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
