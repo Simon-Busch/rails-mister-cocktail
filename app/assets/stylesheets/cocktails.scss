@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 body {
-  background-color: rgb(247, 194, 119);
+  background-color: rgba(0,0,0,.9);
+  color:white;
 }
 // rgb(255, 179, 179)
 .banner {
@@ -11,14 +12,17 @@ body {
   background-position: center;
   padding: 100px 0;
   margin-bottom: 30px;
+  height: 400px;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 46px;
+  font-weight: light;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
 }
 
 .banner p {
@@ -45,6 +49,7 @@ body {
   align-items: center;
   width: 600px;
   margin: 15px auto;
+  background-color: rgba(255,255,255,.2);
 }
 
 .card-product img {
@@ -80,7 +85,6 @@ body {
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   h2 {
     margin-top: 1rem;
-    color: black;
     text-align: center;
     text-transform: uppercase;
   }
@@ -106,4 +110,24 @@ body {
 .btn {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.new-cocktail, .cocktail {
+  background: rgba(lightgrey, .3);
+  border-radius:10px;
+  box-shadow: 3px 3px 3px rgba(255,255,255,.2);
+  width :500px;
+}
+
+.cocktail {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.btn-back {
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
 }

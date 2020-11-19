@@ -14,7 +14,9 @@ Dose.destroy_all
 20.times do 
   Ingredient.create(name: Faker::Beer.brand)
 end
-
+20.times do 
+  Ingredient.create(name: Faker::Dessert.topping)
+end
 first_ingredient= Ingredient.create(name: "lemon")
 second_ingredient= Ingredient.create(name: "ice")
 third_ingredient= Ingredient.create(name: "Orange zest")
