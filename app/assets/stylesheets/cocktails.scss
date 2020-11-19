@@ -1,3 +1,85 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  background-color: rgb(255, 179, 179);
+}
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  margin-bottom: 30px;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.container {
+  text-align: center;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 600px;
+  margin: 15px auto;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.cocktail {
+  height: 600px;
+  width: 600px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  h2 {
+    color: black;
+    text-align: center;
+  }
+  &-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

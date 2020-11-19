@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media-cdn.tripadvisor.com/media/photo-s/19/71/51/02/photo0jpg.jpg);">
+  <div class="container">
+    <h1>Welcome to <strong>Mister cocktails</strong></h1>
+    <p>Find your cocktail</p>
+  </div>
+</div>
+
+<div class="cocktail">
+  <img src='https://www.destinationcocktails.fr/wp-content/uploads/2019/11/cocktails_fumants-e1541424344388.jpg' class="cocktail-img">
+  <h2><%= @cocktail.name %></h2>
+  <p>Composition :</p>
+  <ul>
+    <p><%=@cocktail.doses.description%> || <%=@cocktail.ingredients.name%></p>
+  </ul>
+</div>
+
+<%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
