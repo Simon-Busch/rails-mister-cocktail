@@ -8,10 +8,24 @@
 <div class="cocktail">
   <img src='https://www.destinationcocktails.fr/wp-content/uploads/2019/11/cocktails_fumants-e1541424344388.jpg' class="cocktail-img">
   <h2><%= @cocktail.name %></h2>
-  <p>Composition :</p>
+  <p>Composition</p>
   <ul>
-    <p><%=@cocktail.doses.description%> || <%=@cocktail.ingredients.name%></p>
+    <% @cocktail.doses.each do |dose|%>
+      <li><%="#{dose.description} #{dose.ingredient.name}"%>
+        <i class="fas fa-ban"></i>
+        <%= "delete me", cocktail_dose_path %>
+      </li>
+    <%end%>
   </ul>
 </div>
+
+<div class="container">
+  <%= simple_form_for [@cocktail, @dose] do |f|%>
+    <%=f.association :ingredient %>
+    <%=f.input :description%>
+    <%=f.submit class:"btn btn-primary"%>
+  <% end %>
+  <%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
+</div>  
 
 <%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>

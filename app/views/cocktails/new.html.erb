@@ -8,9 +8,8 @@
 <div class="container">
   <%= simple_form_for(@cocktail) do |f|%>
     <%=f.input :name %>
-    <%=f.input :ingredients %>
-    <%=f.input :doses %>
-    <%=f.submit class:"btn btn-primary"%>
+    <%=f.submit class:"btn btn-danger"%>
   <% end %>
+
   <%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
 </div>  
