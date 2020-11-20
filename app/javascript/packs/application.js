@@ -19,3 +19,12 @@ require("channels")
 // app/javascript/packs/application.js
 import 'bootstrap';
 
+console.warn("Don't look in my console ! ");
+console.warn("Not your business ! ");
+
+// import { shadow } from '../components/effect';
+
+// // document.addEventListener('turbolinks:load', () => {
+// //   // Call your JS functions here
+// //   shadow();
+// // });

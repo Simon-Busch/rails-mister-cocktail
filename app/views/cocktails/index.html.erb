@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/4FOghJzXuYg/maxresdefault.jpg);">
-  <div class="container">
-    <h1>Boozmania</h1>
+  <div class="container hero">
+    <h1 class="header_h1">Boozmania</h1>
     <%= link_to 'Create a cocktail', new_cocktail_path, class:"btn btn-primary rounded-lg" %>
   </div>
 </div>
@@ -18,9 +18,13 @@
           <%end%>
         <%end%>
         <div class="card-product-infos">
+        <div class="flexy">
           <h2><%=cocktail.name%></h2>
+          <%= link_to cocktail_path(cocktail), class:"trash", method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash"></i>
+          <% end %>
+        </div>
           <%= link_to 'Booze me !', cocktail_path(cocktail), class:"btn btn-warning" %>
-          <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, class:"btn btn-warning", data: { confirm: "Are you sure?" }  %>
         </div>
       </div>
     <%end%>
