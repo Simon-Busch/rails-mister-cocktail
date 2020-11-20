@@ -11,9 +11,13 @@
   <% if @cocktail.img_url %>
     <img src=<%=@cocktail.img_url%> class="cocktail-img">
   <%else %>
-    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+    <% if @cocktail.photo.attached?%>
+            <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+          <% else%>
+            <%= cl_image_tag @cocktail.photo.purge, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+          <%end%>
   <%end%>
-  
+
   <h2><%= @cocktail.name %></h2>
   <p>Composition</p>
   <ul>
