@@ -13,7 +13,7 @@ class DosesController < ApplicationController
       redirect_to cocktail_path(@cocktail)
     else
       @dose = Dose.new
-      render "/cocktails/"
+      render "/cocktails/new"
     end
   end
 
