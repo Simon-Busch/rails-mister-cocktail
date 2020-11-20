@@ -4,13 +4,19 @@
     <%= link_to 'Create a cocktail', new_cocktail_path, class:"btn btn-primary rounded-lg" %>
   </div>
 </div>
-<%@cocktails.each do |cocktail|%>
-<div class="card-product">
-  <img src=<%=cocktail.img_url%> />
-  <div class="card-product-infos">
-    <h2><%=cocktail.name%></h2>
-    <%= link_to 'Booze me !', cocktail_path(cocktail), class:"btn btn-warning" %>
+<div class="container">
+  <div class="row">
+    <%@cocktails.each do |cocktail|%>
+      <div class="card-product">
+        <img src=<%=cocktail.img_url%> />
+        <div class="card-product-infos">
+          <h2><%=cocktail.name%></h2>
+          <%= link_to 'Booze me !', cocktail_path(cocktail), class:"btn btn-warning" %>
+          <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, class:"btn btn-warning", data: { confirm: "Are you sure?" }  %>
+            <%# <i class="fa fa-trash"></i> %>
+          
+        </div>
+      </div>
+    <%end%>
   </div>
 </div>
-
-<%end%>
