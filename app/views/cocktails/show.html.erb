@@ -8,7 +8,7 @@
   <%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
 </div>
 <div class="cocktail">
-  <img src='https://www.destinationcocktails.fr/wp-content/uploads/2019/11/cocktails_fumants-e1541424344388.jpg' class="cocktail-img">
+  <img src=<%=@cocktail.img_url%> class="cocktail-img">
   <h2><%= @cocktail.name %></h2>
   <p>Composition</p>
   <ul>

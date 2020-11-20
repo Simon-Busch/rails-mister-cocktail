@@ -6,13 +6,14 @@ body {
   background-color: rgba(0,0,0,.9);
   color:white;
 }
-// rgb(255, 179, 179)
+
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 100px 0;
   margin-bottom: 30px;
-  height: 400px;
+  height: 300px;
 }
 
 .banner h1 {
@@ -48,8 +49,9 @@ body {
   display: flex;
   align-items: center;
   width: 600px;
-  margin: 15px auto;
+  margin: 25px auto;
   background-color: rgba(255,255,255,.2);
+  border-radius: 10px;
 }
 
 .card-product img {
@@ -130,4 +132,18 @@ body {
   align-items: center;
   justify-content: center;
   width: 200px;
+}
+
+.btn-ghost {
+  color: #7d7d7d;
+  border: 1px solid #ffffff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
 }
