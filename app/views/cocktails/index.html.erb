@@ -19,7 +19,7 @@
         <%end%>
         <div class="card-product-infos">
         <div class="flexy">
-          <h2><%=cocktail.name%></h2>
+          <h2><%=cocktail.name%> <%=cocktail.rating%></h2>
           <%= link_to cocktail_path(cocktail), class:"trash", method: :delete, data: { confirm: "Are you sure?" } do %>
           <i class="fa fa-trash"></i>
           <% end %>

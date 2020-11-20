@@ -8,7 +8,7 @@ class Cocktail < ApplicationRecord
   def rating
     # raise
     if self.reviews.length == 0
-      return "⭐️⭐️⭐️"
+      return ""
     else 
       count = 0;
       self.reviews.each do |review|
