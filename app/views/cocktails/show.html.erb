@@ -8,7 +8,12 @@
   <%= link_to 'Back to main page', cocktails_path, class:"btn btn-danger" %>
 </div>
 <div class="cocktail">
-  <img src=<%=@cocktail.img_url%> class="cocktail-img">
+  <% if @cocktail.img_url %>
+    <img src=<%=@cocktail.img_url%> class="cocktail-img">
+  <%else %>
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+  <%end%>
+  
   <h2><%= @cocktail.name %></h2>
   <p>Composition</p>
   <ul>

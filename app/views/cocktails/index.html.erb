@@ -8,7 +8,11 @@
   <div class="row">
     <%@cocktails.each do |cocktail|%>
       <div class="card-product">
-        <img src=<%=cocktail.img_url%> />
+        <% if cocktail.img_url %>
+          <img src=<%=cocktail.img_url%> class="cocktail-img">
+        <%else %>
+          <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+        <%end%>
         <div class="card-product-infos">
           <h2><%=cocktail.name%></h2>
           <%= link_to 'Booze me !', cocktail_path(cocktail), class:"btn btn-warning" %>
@@ -20,3 +24,9 @@
     <%end%>
   </div>
 </div>
+<%= cl_image_tag("t5ef3zteqdbto03vkuym",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("pvnxgzky9ov1krcuvrpa",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>

@@ -12,6 +12,9 @@
 <div class="container new-cocktail">
   <%= simple_form_for(@cocktail) do |f|%>
     <%=f.input :name %>
+    
+    <%= f.input :photo, as: :file %>
+
     <%=f.submit class:"btn btn-ghost"%>
   <% end %>
 </div>  
