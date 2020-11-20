@@ -12,13 +12,14 @@
     <img src=<%=@cocktail.img_url%> class="cocktail-img">
   <%else %>
     <% if @cocktail.photo.attached?%>
-            <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
-          <% else%>
-            <%= cl_image_tag @cocktail.photo.purge, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
-          <%end%>
+      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+    <% else%>
+      <%= cl_image_tag @cocktail.photo.purge, height: 300, width: 400, crop: :fill, class:"cocktail-img"%>
+    <%end%>
   <%end%>
 
-  <h2><%= @cocktail.name %></h2>
+  <h2><%= @cocktail.name %> <%= @cocktail.rating%> 
+  </h2>
   <p>Composition</p>
   <ul>
     <% @cocktail.doses.each do |dose|%>
@@ -35,6 +36,13 @@
     <%=f.association :ingredient %>
     <%=f.input :description%>
     <%=f.submit  "Add an ingredient", class:"btn btn-primary rounded-lg"%>
+  <% end %>
+</div>
+
+<div class="container cocktail">
+  <%= simple_form_for [@cocktail, @review] do |f|%>
+    <%=f.input :rating, input_html: { min: '0', step: '1', max: '5' }%>
+    <%=f.submit  "Add a rating 🚀", class:"btn btn-primary rounded-lg"%>
   <% end %>
 </div>  
 
