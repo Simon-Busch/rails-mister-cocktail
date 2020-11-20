@@ -24,7 +24,7 @@ console.warn("Not your business ! ");
 
 // import { shadow } from '../components/effect';
 
-// // document.addEventListener('turbolinks:load', () => {
-// //   // Call your JS functions here
-// //   shadow();
-// // });
+// document.addEventListener('turbolinks:load', () => {
+//   // Call your JS functions here
+//   shadow();
+// });
