@@ -28,3 +28,11 @@ console.warn("Not your business ! ");
 //   // Call your JS functions here
 //   shadow();
 // });
+
+import { loadDynamicBannerText } from '../components/banner';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  // [...]
+  loadDynamicBannerText();
+});

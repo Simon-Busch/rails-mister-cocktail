@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.ytimg.com/vi/4FOghJzXuYg/maxresdefault.jpg);">
   <div class="container hero">
     <h1 class="header_h1">Boozmania</h1>
-    <%= link_to 'Create a cocktail', new_cocktail_path, class:"btn btn-primary rounded-lg" %>
+    <%= link_to 'Create a cocktail', new_cocktail_path, class:"btn btn-main" %>
   </div>
 </div>
 <div class="container">
@@ -24,7 +24,7 @@
           <i class="fa fa-trash"></i>
           <% end %>
         </div>
-          <%= link_to 'Booze me !', cocktail_path(cocktail), class:"btn btn-warning" %>
+          <%= link_to 'Booze me !', cocktail_path(cocktail), class:"btn btn-main" %>
         </div>
       </div>
     <%end%>

@@ -1,0 +1,10 @@
+.btn-main {
+  color:white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: .5rem 1.2rem;
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
