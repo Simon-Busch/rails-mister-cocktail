@@ -29,7 +29,7 @@ console.warn("Not your business ! ");
 //   shadow();
 // });
 
-import { loadDynamicBannerText } from '../components/banner';
+import { loadDynamicBannerText } from '../components/type';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
